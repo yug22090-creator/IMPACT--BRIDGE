@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Bridge | About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap');
+        :root { --primary: #6366f1; --bg-dark: #020617; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-dark); color: #f8fafc; overflow-x: hidden; }
+        h1, h2, h3, .nav-logo { font-family: 'Outfit', sans-serif; }
+        
+        .glass-nav { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        .nav-link { position: relative; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #94a3b8; transition: all 0.3s ease; }
+        .nav-link:hover { color: #ffffff; }
+        .nav-link.active { color: #818cf8; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #6366f1; transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+
+        .gradient-text { background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-dark { background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); transition: all 0.4s ease; }
+        .card-dark:hover { transform: translateY(-10px); border-color: rgba(99, 102, 241, 0.3); }
+        
+        .info-pill { background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); color: #818cf8; padding: 6px 16px; border-radius: 99px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <header class="glass-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-12">
+                <a href="index.html" class="flex items-center space-x-3 nav-logo group">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-bridge"></i>
+                    </div>
+                    <span class="text-xl font-800 uppercase tracking-tight">Impact <span class="text-indigo-400">Bridge</span></span>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="opportunities.html" class="nav-link">Opportunities</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="opportunities.html" class="hidden sm:block bg-indigo-600 px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg shadow-indigo-500/20 hover:scale-105 active:scale-95 transition">Get Started</a>
+                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()"><i class="fa-solid fa-bars-staggered"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-950/98 backdrop-blur-xl z-[60] translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 lg:hidden">
+        <button class="absolute top-6 right-6 text-4xl text-white" onclick="toggleMenu()">&times;</button>
+        <a href="index.html" class="text-2xl font-bold text-slate-400" onclick="toggleMenu()">Home</a>
+        <a href="opportunities.html" class="text-2xl font-bold text-slate-400" onclick="toggleMenu()">Opportunities</a>
+        <a href="about.html" class="text-2xl font-bold text-indigo-400" onclick="toggleMenu()">About</a>
+        <a href="contact.html" class="text-2xl font-bold text-slate-400" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <!-- Hero Section -->
+        <section class="text-center mb-24" data-aos="fade-up">
+            <h1 class="text-5xl md:text-8xl font-800 text-white mb-8 tracking-tighter leading-tight">Radical <br><span class="gradient-text italic font-light">Global Solidarity.</span></h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">Impact Bridge is built on the foundation of solidarity, not just charity. We empower high-skilled professionals to work alongside grassroots movements to create lasting structural change.</p>
+        </section>
+
+        <!-- New Information Section: What is Impact Bridge? -->
+        <section class="mb-32 max-w-5xl mx-auto" data-aos="fade-up">
+            <div class="bg-indigo-600/5 border border-indigo-500/10 rounded-[3rem] p-10 md:p-16 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-10 text-[10rem] pointer-events-none">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                </div>
+                
+                <div class="relative z-10">
+                    <span class="info-pill mb-6 inline-block">The Platform</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">A Digital Ecosystem for Social Evolution</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-slate-400 leading-relaxed">
+                        <p>
+                            Impact Bridge acts as a specialized talent engine. We recognize that while passion is vital, it is <span class="text-white font-semibold">expertise</span>—in engineering, design, data science, and strategy—that scales the work of humanitarian organizations. We curate specific "Opportunities" where your unique professional DNA can solve critical roadblocks.
+                        </p>
+                        <p>
+                            Through our streamlined "Volunteering" model, we eliminate the noise. No generic tasks—only high-stakes missions. Whether it's building a renewable energy grid or designing educational software for remote villages, we bridge the gap between those who want to help and the complex systems that need fixing.
+                        </p>
+                    </div>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-2 text-indigo-400 font-bold text-sm">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Vetted NGOs</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-indigo-400 font-bold text-sm">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Skilled Matching</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-indigo-400 font-bold text-sm">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Measurable Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+            <div class="card-dark p-12 rounded-[3rem]" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-indigo-400 text-3xl mb-8"><i class="fa-solid fa-handshake-angle"></i></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Mutual Aid</h3>
+                <p class="text-slate-500 leading-relaxed">We don't believe in top-down solutions. Our vision is a network of mutual aid where expertise is shared to foster self-sufficiency.</p>
+            </div>
+            <div class="card-dark p-12 rounded-[3rem]" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 text-3xl mb-8"><i class="fa-solid fa-bridge-circle-check"></i></div>
+                <h3 class="text-2xl font-bold text-white mb-4">The Bridge</h3>
+                <p class="text-slate-500 leading-relaxed">Connecting corporate brilliance with humanitarian urgency. We ensure that your skills meet the moment of greatest need.</p>
+            </div>
+            <div class="card-dark p-12 rounded-[3rem]" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 bg-rose-500/10 rounded-2xl flex items-center justify-center text-rose-400 text-3xl mb-8"><i class="fa-solid fa-earth-africa"></i></div>
+                <h3 class="text-2xl font-bold text-white mb-4">Global Impact</h3>
+                <p class="text-slate-500 leading-relaxed">Every mission is a step toward a more equitable world. We measure our success by the lives touched and systems improved.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-slate-900 text-center">
+        <p class="text-slate-600 text-[10px] tracking-widest font-bold uppercase">&copy; 2026 Impact Bridge.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        }
+    </script>
+</body>
+</html>

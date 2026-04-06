@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Bridge | Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Outfit:wght@400;700&display=swap');
+        
+        :root { --primary: #6366f1; --bg-dark: #020617; }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: #f8fafc; 
+            margin: 0;
+        }
+
+        h2, .nav-logo { font-family: 'Outfit', sans-serif; }
+
+        .glass-nav { 
+            background: rgba(2, 6, 23, 0.85); 
+            backdrop-filter: blur(16px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+
+        .nav-link { 
+            font-size: 11px; 
+            font-weight: 700; 
+            letter-spacing: 0.15em; 
+            text-transform: uppercase; 
+            color: #94a3b8; 
+            transition: all 0.3s ease; 
+            position: relative;
+        }
+        .nav-link:hover { color: #ffffff; }
+        .nav-link::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -4px; 
+            left: 0; 
+            width: 0; 
+            height: 2px; 
+            background: #6366f1; 
+            transition: width 0.3s; 
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .card-dark { 
+            background: rgba(15, 23, 42, 0.4); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(10px);
+        }
+        
+        input, textarea { 
+            background: rgba(30, 41, 59, 0.3) !important; 
+            border: 1px solid rgba(255, 255, 255, 0.1) !important; 
+            color: white !important; 
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus { 
+            border-color: #6366f1 !important; 
+            background: rgba(30, 41, 59, 0.5) !important;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+
+        /* Social Button Styling */
+        .social-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .social-btn:hover {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header class="glass-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-12">
+                <a href="index.html" class="flex items-center space-x-3 nav-logo group">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-bridge"></i>
+                    </div>
+                    <span class="text-xl font-800 uppercase tracking-tight text-white">Impact <span class="text-indigo-400">Bridge</span></span>
+                </a>
+                
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="opportunities.html" class="nav-link">Opportunities</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="opportunities.html" class="hidden sm:block bg-indigo-600 px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-lg shadow-indigo-500/20 hover:scale-105 active:scale-95 transition">Get Started</a>
+                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()"><i class="fa-solid fa-bars-staggered"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-950/98 backdrop-blur-xl z-[60] translate-x-full transition-transform duration-300 flex flex-col items-center justify-center space-y-8 lg:hidden">
+        <button class="absolute top-6 right-6 text-4xl text-white" onclick="toggleMenu()">&times;</button>
+        <a href="index.html" class="text-2xl font-bold text-slate-400 hover:text-white" onclick="toggleMenu()">Home</a>
+        <a href="opportunities.html" class="text-2xl font-bold text-slate-400 hover:text-white" onclick="toggleMenu()">Opportunities</a>
+        <a href="about.html" class="text-2xl font-bold text-slate-400 hover:text-white" onclick="toggleMenu()">About</a>
+        <a href="contact.html" class="text-2xl font-bold text-slate-400 hover:text-white" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <div class="card-dark rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <div class="gradient-bg p-10 md:p-14 text-center">
+                <h2 class="text-3xl md:text-4xl font-800 text-white mb-3" id="mission-title">Mission Registration</h2>
+                <p class="text-indigo-100 text-sm font-medium tracking-wide uppercase">Your journey towards global impact starts here</p>
+            </div>
+            
+            <div class="p-8 md:p-16">
+                <!-- Social Registration Options -->
+                <div class="mb-10">
+                    <p class="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] text-center mb-6">Quick Register via</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="handleSocial('Google')" class="social-btn flex items-center justify-center space-x-3 py-4 rounded-2xl group">
+                            <i class="fa-brands fa-google text-white group-hover:text-indigo-400 transition-colors"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest text-white">Google</span>
+                        </button>
+                        <button onclick="handleSocial('Facebook')" class="social-btn flex items-center justify-center space-x-3 py-4 rounded-2xl group">
+                            <i class="fa-brands fa-facebook-f text-white group-hover:text-indigo-400 transition-colors"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest text-white">Facebook</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-center mb-10">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-slate-800"></div>
+                    </div>
+                    <span class="relative bg-[#0a1125] px-4 text-[10px] font-black text-slate-600 uppercase tracking-[0.3em]">Or use Email</span>
+                </div>
+
+                <!-- Original Form -->
+                <form class="space-y-8" onsubmit="handleSubmit(event)">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">Full Name</label>
+                            <input type="text" required class="w-full px-6 py-4 rounded-2xl outline-none" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">Phone Number</label>
+                            <input type="tel" required class="w-full px-6 py-4 rounded-2xl outline-none" placeholder="+91 00000 00000">
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">Email Address</label>
+                        <input type="email" required class="w-full px-6 py-4 rounded-2xl outline-none" placeholder="john@example.com">
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">Why do you want to join?</label>
+                        <textarea rows="4" required class="w-full px-6 py-4 rounded-2xl outline-none resize-none" placeholder="Tell us about your motivation and skills..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-5 gradient-bg text-white rounded-2xl font-800 uppercase tracking-widest text-xs shadow-xl shadow-indigo-500/20 hover:brightness-110 hover:-translate-y-1 transition-all active:scale-[0.98]">
+                        Complete Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const mission = urlParams.get('mission');
+        if (mission) {
+            document.getElementById('mission-title').innerText = mission;
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
+
+        function handleSocial(provider) {
+            // Placeholder for social auth logic
+            const btn = event.currentTarget;
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = `<span class="text-[10px] font-bold tracking-widest uppercase">Connecting to ${provider}...</span>`;
+            
+            setTimeout(() => {
+                alert(`Redirecting to ${provider} authentication...`);
+                btn.innerHTML = originalContent;
+            }, 1000);
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.innerText = "SUBMITTING...";
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Success! Your application for ' + (mission || 'this mission') + ' has been received.');
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
