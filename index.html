@@ -19,7 +19,7 @@
         @keyframes float { from { transform: translate(0,0); } to { transform: translate(80px, 40px); } }
         
         /* Navigation styling */
-        .nav-link { position: fixed; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s ease; }
+        .nav-link { position: relative; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.3s ease; }
         .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #6366f1; transition: width 0.3s; }
         .nav-link:hover::after { width: 100%; }
         .nav-link.active { color: #818cf8; }
